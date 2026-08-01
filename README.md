@@ -136,3 +136,4 @@ pip3 install -r requirements.txt
 
 
 Python Web Development Bootcamp
+<img width="1402" height="1122" alt="first-week" src="https://github.com/user-attachments/assets/337b43e6-6495-48cb-851e-1f033a9bc809" />
