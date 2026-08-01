@@ -131,8 +131,8 @@ source venv/bin/activate
 لتثبيت المكتبات:
 
 pip3 install -r requirements.txt
-Author
 
-Ammar
+
+
 
 Python Web Development Bootcamp
