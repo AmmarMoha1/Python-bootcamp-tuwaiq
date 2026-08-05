@@ -64,3 +64,11 @@ if (index < len(teacher_name)):
     print("The character at index", index, "is:", teacher_name[index])
 else:
     print("Index out of range. Please enter a valid index.")
+
+
+x = 0
+y = 1
+
+x, y = y, x
+
+print (x,y)
