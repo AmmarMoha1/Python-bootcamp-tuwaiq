@@ -1,4 +1,4 @@
-
+# Generators comprehension
 from copy import deepcopy
 numbers = range(1_000_000)
 
@@ -33,7 +33,7 @@ print(alias)
 print(id(alias))
 print(original is alias)
 
-
+# Shallow Copy اذا غيرت الاندكس كامل ما يتيغر فالاساسي لكن لو غيرت داخل الاندكس صفر حرف بس راح يتغير فالاثنين
 original = ["Python", "Git"]
 clone = original.copy()
 
@@ -50,7 +50,7 @@ print(original is clone)  # False
 original = [["Sara", 90], ["Omar", 80]]
 clone = original.copy()
 
-clone[0][1] = 95
+clone[0][1] = 95  # مثال تغيير داخل الانديكس بيتغير فالاثنين
 
 print(original)
 print(id(original))
