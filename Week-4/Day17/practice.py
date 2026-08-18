@@ -76,7 +76,7 @@ with path.open("a", encoding="utf-8") as file:
 print("Activity saved")
 
 
-
+#utf and newline
 from pathlib import Path
 
 names = ["Sara", "Ali", "عمار"]
