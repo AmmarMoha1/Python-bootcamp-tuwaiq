@@ -1,4 +1,5 @@
 # Lab 1
+from pathlib import Path
 class Ticket:
     def __init__(self, name, status = "Open"):
         self.name = name
@@ -54,11 +55,11 @@ from pathlib import Path
 
 path = Path("home") / "students" / "students.txt"
 
-path.mkdir(parents=True, exist_ok=True)
+path.parent.mkdir(parents=True, exist_ok=True)
 
 print(path.is_dir())
 print(path.suffix)
 print(path.name)
 print(path.is_file())
 
-path.write_txt("Welcome to class", encoding="utf-8")
+path.write_text("Welcome to class", encoding="utf-8")
