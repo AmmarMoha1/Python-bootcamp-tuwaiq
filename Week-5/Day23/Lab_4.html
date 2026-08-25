@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Course Registration Page</title>
+        <h1>Course Registration</h1>
+        <link rel="stylesheet" href="Lab_4.css">
+    </head>
+    <body>
+        <section>
+            <p>Welcome to the course registration page</p>
+            <img src = https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxIndvPNQu-W2-8MLKYCZCdG4ePt1pKZ_5v3RNEAZcQw&s=10 alt="image" width="200" height="200">
+        </section>
+        <section>
+            <h2>About the Progrma</h2>
+            <table border="1">
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Course Duration</th>
+                <tr>
+                    <td>CS-101</td>
+                    <td>Introduction to Computer Science</td>
+                    <td>2 years</td>
+                </tr>
+                <tr>
+                    <td>CS-201</td>
+                    <td>Introduction to Computer Science</td>
+                    <td>2 years</td>
+                </tr>
+                <tr>
+                    <td>CS-301</td>
+                    <td>Introduction to Computer Science</td>
+                    <td>2 years</td>
+                </tr>
+            </table>
+        </section>
+            <section>
+                <h2>Registration Form </h2>
+                <form action = "/register" method="POST">
+                    <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for = "name">Name</label>
+                    <input id = "name" name = "name" required>
+                    <br>
+                    <br>
+                    <label for = "email">Email</label>
+                    <input id = "email" name = "email" required>
+                    <br><br>
+                    <label for = "date">Date of Birth</label>
+                    <input type = "date" name = "date" required>
+                    <br><br>
+                    <label for = "gender">Gender</label>
+                    <input type = "radio" name = "gender" value = "male">Male
+                    <input type = "radio" name = "gender" value = "female">Female
+                    <br><br>
+                    <label for = "country">Country</label>
+                    <select name = "country">
+                        <option value = "KSA">KSA</option>
+                        <option value = "Qatar">Qatar</option>
+                        <option value = "UAE">UAE</option>
+                    </select>
+                    </fieldset>
+                    <br><br>
+                    <fieldset>
+                    <legend>Select Course</legend>
+                    <label for = "Course One">CS-101</label>
+                    <input type = "checkbox" name = "Course One">
+                    <br>
+                    <label for = "Course Two">CS-201</label>
+                    <input type = "checkbox" name = "Course Two">
+                    <br>
+                    <label for = "Course Three">CS-301</label>
+                    <input type = "checkbox" name = "Course Three">
+                    </fieldset>
+                    <br>
+                    <button type = "submit">Submit</button>
+                </form>
+            </section>
+    </body>
+    <footer>
+        <p>Copyright &copy; 2026</p>
+    </footer>
+</html>
