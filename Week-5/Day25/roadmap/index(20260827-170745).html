@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Fundamentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="top-header">
+        <div>
+            <p class="eyebrow">WEEK 5 ROADMAP</p>
+            <h1>Web Development Fundamentals</h1>
+            <p class="subtitle">
+                A visual roadmap covering HTTP, HTML, CSS, Flexbox,
+                Responsive Design, Transitions, Transforms and Animations.
+            </p>
+        </div>
+
+        <nav>
+            <a href="#http">HTTP</a>
+            <a href="#html">HTML</a>
+            <a href="#css">CSS</a>
+            <a href="#flexbox">Flexbox</a>
+            <a href="#responsive">Responsive</a>
+            <a href="#animation">Animation</a>
+        </nav>
+    </header>
+
+    <main class="roadmap">
+
+        <!-- HTTP -->
+        <section id="http" class="topic topic-http">
+            <div class="topic-title">
+                <span class="number">1</span>
+                <div>
+                    <p class="small-label">HOW THE WEB WORKS</p>
+                    <h2>HTTP</h2>
+                </div>
+            </div>
+
+            <div class="topic-grid">
+
+                <article class="card">
+                    <h3>How It Works</h3>
+                    <ol>
+                        <li>The client (browser) sends a request to the server.</li>
+                        <li>The server processes the request.</li>
+                        <li>The server sends a response back to the client.</li>
+                        <li>The browser displays HTML, CSS, JavaScript and images.</li>
+                    </ol>
+                </article>
+
+                <article class="card">
+                    <h3>HTTP – How the Web Works</h3>
+                    <p>
+                        HTTP stands for <strong>HyperText Transfer Protocol</strong>.
+                        It defines how messages are formatted and transmitted
+                        between clients and web servers.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Request Methods</h3>
+                    <div class="method-list">
+                        <div><code>GET</code><span>Request data from the server</span></div>
+                        <div><code>POST</code><span>Send or create data</span></div>
+                        <div><code>PUT</code><span>Update data</span></div>
+                        <div><code>DELETE</code><span>Delete data</span></div>
+                    </div>
+                </article>
+
+                <article class="card flow-card">
+                    <h3>HTTP Flow</h3>
+                    <div class="http-flow">
+                        <div class="device">
+                            <div class="monitor">💻</div>
+                            <strong>Client</strong>
+                            <span>Browser</span>
+                        </div>
+
+                        <div class="flow-arrows">
+                            <div>Request →</div>
+                            <div>← Response</div>
+                        </div>
+
+                        <div class="device">
+                            <div class="monitor">🖥️</div>
+                            <strong>Server</strong>
+                            <span>Backend</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Status Codes</h3>
+                    <ul class="status-list">
+                        <li><b>200 OK</b> — Request succeeded</li>
+                        <li><b>201 Created</b> — Resource created successfully</li>
+                        <li><b>400 Bad Request</b> — Invalid request</li>
+                        <li><b>401 Unauthorized</b> — Authentication required</li>
+                        <li><b>404 Not Found</b> — Resource not found</li>
+                        <li><b>500 Server Error</b> — Internal server problem</li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- WEB DEVELOPMENT -->
+        <section class="intro-banner">
+            <div class="intro-icon">🌐</div>
+            <div>
+                <p class="small-label">WHAT IS WEB DEVELOPMENT?</p>
+                <h2>Building Websites & Web Applications</h2>
+                <p>
+                    Web development is the process of creating websites and applications
+                    that run on the Internet. It includes the structure, styling,
+                    behavior and interaction of web pages.
+                </p>
+            </div>
+        </section>
+
+        <!-- HTML -->
+        <section id="html" class="topic topic-html">
+            <div class="topic-title">
+                <span class="number">2</span>
+                <div>
+                    <p class="small-label">STRUCTURE</p>
+                    <h2>HTML</h2>
+                </div>
+            </div>
+
+            <div class="topic-grid">
+
+                <article class="card">
+                    <h3>HTML – Structure</h3>
+                    <p>
+                        HTML stands for <strong>HyperText Markup Language</strong>.
+                        It is used to create the structure and content of web pages.
+                    </p>
+                </article>
+
+                <article class="card code-card">
+                    <h3>Basic HTML Document</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </article>
+
+                <article class="card">
+                    <h3>Important Elements</h3>
+                    <div class="two-column-list">
+                        <span>Headings</span><code>&lt;h1&gt; - &lt;h6&gt;</code>
+                        <span>Paragraph</span><code>&lt;p&gt;</code>
+                        <span>Link</span><code>&lt;a&gt;</code>
+                        <span>Image</span><code>&lt;img&gt;</code>
+                        <span>Lists</span><code>&lt;ul&gt; &lt;ol&gt; &lt;li&gt;</code>
+                        <span>Table</span><code>&lt;table&gt;</code>
+                        <span>Form</span><code>&lt;form&gt;</code>
+                        <span>Div</span><code>&lt;div&gt;</code>
+                        <span>Span</span><code>&lt;span&gt;</code>
+                    </div>
+                </article>
+
+
+            </div>
+        </section>
+
+        <!-- CSS -->
+        <section id="css" class="topic topic-css">
+            <div class="topic-title">
+                <span class="number">3</span>
+                <div>
+                    <p class="small-label">STYLING</p>
+                    <h2>CSS</h2>
+                </div>
+            </div>
+
+            <div class="topic-grid">
+
+                <article class="card">
+                    <h3>CSS – Styling</h3>
+                    <p>
+                        CSS stands for <strong>Cascading Style Sheets</strong>.
+                        It controls the look, layout and visual style of HTML elements.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Ways to Add CSS</h3>
+                    <ol>
+                        <li><strong>Inline CSS</strong> — using the <code>style</code> attribute.</li>
+                        <li><strong>Internal CSS</strong> — inside a <code>&lt;style&gt;</code> tag.</li>
+                        <li><strong>External CSS</strong> — using a separate CSS file.</li>
+                    </ol>
+                </article>
+
+                <article class="card">
+                    <h3>Common CSS Properties</h3>
+                    <div class="property-grid">
+                        <code>color</code><span>Text color</span>
+                        <code>background-color</code><span>Background color</span>
+                        <code>font-family</code><span>Font type</span>
+                        <code>font-size</code><span>Text size</span>
+                        <code>margin</code><span>Outer spacing</span>
+                        <code>padding</code><span>Inner spacing</span>
+                        <code>border</code><span>Border around element</span>
+                    </div>
+                </article>
+
+                <article class="card box-model-card">
+                    <h3>Box Model</h3>
+
+                    <div class="box-model">
+                        <div class="margin-box">
+                            margin
+                            <div class="border-box">
+                                border
+                                <div class="padding-box">
+                                    padding
+                                    <div class="content-box">
+                                        content
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="center-text">
+                        Every element is a box:
+                        <strong>content → padding → border → margin</strong>
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- FLEXBOX -->
+        <section id="flexbox" class="topic topic-flex">
+            <div class="topic-title">
+                <span class="number">4</span>
+                <div>
+                    <p class="small-label">LAYOUT</p>
+                    <h2>Flexbox</h2>
+                </div>
+            </div>
+
+            <p class="topic-description">
+                Flexbox is a one-dimensional layout method used to arrange
+                items in rows or columns.
+            </p>
+
+            <div class="enable-flex">
+                <code>display: flex;</code>
+            </div>
+
+            <div class="flex-info-grid">
+
+                <article class="card">
+                    <h3>Flex Container Properties</h3>
+                    <ul>
+                        <li><code>flex-direction</code></li>
+                        <li><code>justify-content</code></li>
+                        <li><code>align-items</code></li>
+                        <li><code>flex-wrap</code></li>
+                        <li><code>gap</code></li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Main Axis & Cross Axis</h3>
+
+                    <div class="axis-demo">
+                        <div class="axis-items">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <p>← Main Axis →</p>
+                        <p>↕ Cross Axis</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Flex Item Properties</h3>
+                    <ul>
+                        <li><code>order</code></li>
+                        <li><code>flex-grow</code></li>
+                        <li><code>flex-shrink</code></li>
+                        <li><code>flex-basis</code></li>
+                        <li><code>align-self</code></li>
+                    </ul>
+                </article>
+
+            </div>
+
+            <article class="card alignment-card">
+                <h3>Flexbox Alignment Examples</h3>
+
+                <div class="alignment-examples">
+                    <div>
+                        <b>flex-start</b>
+                        <div class="mini-flex start">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <b>center</b>
+                        <div class="mini-flex center">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <b>space-between</b>
+                        <div class="mini-flex between">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <b>space-around</b>
+                        <div class="mini-flex around">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <b>space-evenly</b>
+                        <div class="mini-flex evenly">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- RESPONSIVE -->
+        <section id="responsive" class="topic topic-responsive">
+            <div class="topic-title">
+                <span class="number">5</span>
+                <div>
+                    <p class="small-label">BUILD FOR ALL SCREENS</p>
+                    <h2>Responsive Design</h2>
+                </div>
+            </div>
+
+            <div class="responsive-grid">
+
+                <article class="card">
+                    <h3>Responsive Design</h3>
+                    <p>
+                        Responsive design makes websites work well on phones,
+                        tablets, laptops and desktop screens.
+                    </p>
+                    <div class="screen-icons">📱 💻 🖥️</div>
+                </article>
+
+                <article class="card">
+                    <h3>Key Concepts</h3>
+                    <ol>
+                        <li>
+                            <strong>Viewport Meta Tag</strong>
+                            <pre><code>&lt;meta name="viewport"
+content="width=device-width,
+initial-scale=1.0"&gt;</code></pre>
+                        </li>
+
+                        <li>
+                            <strong>Media Queries</strong>
+                            <pre><code>@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}</code></pre>
+                        </li>
+
+                        <li><strong>Flexible Units</strong> — %, rem, vw, vh.</li>
+
+                        <li>
+                            <strong>Breakpoints</strong>
+                            <ul>
+                                <li>Mobile: up to 576px</li>
+                                <li>Tablet: 577px – 992px</li>
+                                <li>Desktop: 993px and above</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Flexible Layouts</strong> — Flexbox and Grid.</li>
+                    </ol>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ANIMATION -->
+        <section id="animation" class="topic topic-animation">
+            <div class="topic-title">
+                <span class="number">6</span>
+                <div>
+                    <p class="small-label">BRING YOUR WEB PAGES TO LIFE</p>
+                    <h2>Animation</h2>
+                </div>
+            </div>
+
+            <p class="topic-description">
+                CSS animations allow elements to gradually change from one style to another.
+            </p>
+
+            <div class="animation-grid">
+
+                <article class="card animated-card transition-demo">
+                    <h3>Transition</h3>
+                    <p>Applies changes smoothly over a specified duration.</p>
+<pre><code>.button {
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background: green;
+}</code></pre>
+                    <button class="demo-button">Hover Me</button>
+                </article>
+
+                <article class="card animated-card transform-demo">
+                    <h3>Transform</h3>
+                    <p>Changes the shape or position of an element.</p>
+<pre><code>.box:hover {
+    transform:
+        scale(1.1)
+        rotate(5deg);
+}</code></pre>
+                    <div class="demo-box">Hover</div>
+                </article>
+
+                <article class="card animated-card">
+                    <h3>Keyframes Animation</h3>
+                    <p>Creates more complex animations using keyframes.</p>
+<pre><code>@keyframes slide {
+    0%   { left: 0; }
+    50%  { left: 100px; }
+    100% { left: 0; }
+}</code></pre>
+                    <div class="animation-track">
+                        <div class="moving-box"></div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h3>Common Timing Functions</h3>
+                    <ul>
+                        <li><code>ease</code> — slow start, fast middle, slow end</li>
+                        <li><code>linear</code> — constant speed</li>
+                        <li><code>ease-in</code> — slow start</li>
+                        <li><code>ease-out</code> — slow end</li>
+                        <li><code>ease-in-out</code> — slow start and end</li>
+                    </ul>
+                </article>
+
+            </div>
+
+            <div class="best-practices">
+                <span>✓ Use subtle animations</span>
+                <span>✓ Keep durations short</span>
+                <span>✓ Do not overuse animations</span>
+                <span>✓ Maintain good performance</span>
+            </div>
+        </section>
+
+        <!-- SUMMARY -->
+        <section class="summary-section">
+            <div>
+                <p class="small-label">THIS WEEK WE LEARNED</p>
+                <h2>Week 5 Summary</h2>
+            </div>
+
+            <div class="summary-list">
+                <p>✓ How the web works with HTTP</p>
+                <p>✓ How to build structure using HTML</p>
+                <p>✓ How to style using CSS</p>
+                <p>✓ How to create layouts with Flexbox</p>
+                <p>✓ How to build responsive websites</p>
+                <p>✓ How to add transitions, transforms and animations</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Week 5 • Web Development Fundamentals</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
