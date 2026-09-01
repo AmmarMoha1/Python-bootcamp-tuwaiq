@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+Movies
+{% endblock %}
+
+{% block content %}
+
+<h2>Movies</h2>
+
+{% for movie in movies %}
+
+<div>
+    <h3>
+        <a href="{% url 'movie_detail' forloop.counter %}">
+            {{ movie.title }}
+        </a>
+    </h3>
+
+    <p>Year: {{ movie.year }}</p>
+    <p>Rating: {{ movie.rating }}</p>
+</div>
+
+<hr>
+
+{% empty %}
+<p>No movies available.</p>
+{% endfor %}
+
+{% endblock %}
