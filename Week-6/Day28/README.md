@@ -51,6 +51,7 @@ books = [
         'author': 'Author 2'
     },
 ]
+```
 
 # CHALLENGE: Movie Catalog
 
