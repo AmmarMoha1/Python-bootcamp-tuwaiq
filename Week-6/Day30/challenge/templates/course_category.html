@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+Course Category
+{% endblock %}
+
+{% block content %}
+
+<h1>Course Category</h1>
+
+<p>Category: {{ category }}</p>
+
+<a href="{% url 'courses:list' %}">
+    Back to Courses
+</a>
+
+{% endblock %}

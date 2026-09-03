@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<h1>Dashboard Home</h1>
+
+<a href="{% url 'dashboard:reports' %}">
+    View Reports
+</a>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+Courses
+{% endblock %}
+
+{% block content %}
+
+<h1>Courses List</h1>
+
+<ul>
+    <li>
+        <a href="{% url 'courses:detail' 'python-basics' %}">
+            Python Basics
+        </a>
+    </li>
+
+    <li>
+        <a href="{% url 'courses:detail' 'django-basics' %}">
+            Django Basics
+        </a>
+    </li>
+</ul>
+
+<a href="{% url 'courses:category' 'programming' %}">
+    Programming Category
+</a>
+
+{% endblock %}
