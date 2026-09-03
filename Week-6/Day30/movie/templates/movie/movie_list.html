@@ -12,7 +12,7 @@ Movies
 
 <div>
     <h3>
-        <a href="{% url 'movie_detail' forloop.counter %}">
+        <a href="{% url 'movie:movie_detail' forloop.counter %}">
             {{ movie.title }}
         </a>
     </h3>
