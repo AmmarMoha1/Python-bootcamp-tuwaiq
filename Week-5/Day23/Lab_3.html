@@ -1,40 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Profile</title>
-        <link rel="stylesheet" href="Lab_3.css">
-    </head>
+<body>
 
-    <body>
-        <h1>Profile</h1>
+    <div class="container">
+
+        <h1 class="header">Profile</h1>
         <p>My profile.</p>
-        <h2>Name</h2>
+
+        <h2 class="header">Name</h2>
         <p>Ammar Mohammed</p>
-        <h2>Age</h2>
+
+        <h2 class="header">Age</h2>
         <p>26</p>
 
-        <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZD9VVp0utwQRxzPMqdFFZ32Zf3sifzslRgrjnp61TCg&s=10" alt="image" width="200" height="200">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZD9VVp0utwQRxzPMqdFFZ32Zf3sifzslRgrjnp61TCg&s=10"
+            alt="image" width="200" height="200">
 
         <ul>
             <li><a href="index.html">Labs</a></li>
             <li><a href="profile.html">Profile</a></li>
             <li><a href="First_Page.html">First Page</a></li>
         </ul>
+
         <ol>
             <li>HTML</li>
             <li>CSS</li>
             <li>JS</li>
         </ol>
 
-        <from action = "/contact" method = "POST">
-            <label for = "email">Email</label>
-            <input id = "email" name = "email">
-            <textarea name ="message"></textarea>
+        <form action="/contact" method="POST">
+            <label for="email">Email</label>
+            <input id="email" name="email">
+
+            <textarea name="message"></textarea>
+
             <button type="submit">Send</button>
-        </from>
+        </form>
 
         <button>Feedback</button>
-        
-    </body>
-</html>
+
+    </div>
+
+</body>

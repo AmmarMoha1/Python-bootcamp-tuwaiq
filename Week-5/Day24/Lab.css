@@ -92,6 +92,7 @@ body {
     margin: auto;
 }
 
+
 input,
 textarea {
     display: block;
@@ -106,7 +107,13 @@ textarea {
     min-height: 120px;
 }
 
+button:hover {
+    background-color: #222;
+    color: #fff;
+}
+
 button {
+    transition: background-color 0.3s;
     padding: 10px 20px;
 
     border: none;
@@ -114,6 +121,8 @@ button {
 
     cursor: pointer;
 }
+
+
 
 /* Tablet */
 @media (max-width: 900px) {
@@ -148,4 +157,34 @@ button {
         grid-template-columns: 1fr;
     }
 
+}
+
+
+.card {
+    transition: transform 0.3s;
+    /* transform: translateY(20px); */
+    /* transform: rotate(10deg); */
+    /* transform: scale(1.1) rotate(5deg); */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.button {
+    transition: transform 0.3s;
+}
+/* animation */
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
+.contact {
+    animation: move 2s;
 }

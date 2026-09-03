@@ -3,7 +3,7 @@ from copy import deepcopy
 students = [
     {"name": "Sara", "score": [90, 80, 85]},
     {"name": "Omar", "score": [85, 90, 95]},
-    {"name": "Ahmed","score": [30, 55, 50]},
+    {"name": "Ahmed", "score": [30, 55, 50]},
 ]
 
 avg_students = [
@@ -34,3 +34,4 @@ rep_index["Ahmed"] = {
 
 print(rep_index)
 print(backup)
+print(rep_index is backup)

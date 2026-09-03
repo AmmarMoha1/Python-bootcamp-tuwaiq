@@ -1,60 +1,62 @@
-#list comperhension , odd numbers
-numbers = [1, 2, 3, 4, 5] #assign statment
+# list comperhension , odd numbers
+numbers = [1, 2, 3, 4, 5]  # assign statment
 
-squares = [               #squares comperhension
-    number ** 2           #expression
-    for number in numbers #clause
-    if number % 2 == 1    #Filter
+squares = [  # squares comperhension
+    number ** 2  # expression
+    for number in numbers  # clause
+    if number % 2 == 1  # Filter
 ]
 
-print(squares) #[1, 9, 25]
+print(squares)  # [1, 9, 25]
 
 
-prices = [10, 25, 40]     #assign
+prices = [10, 25, 40]  # assign
 
 prices_with_vat = [
-    round(price * 1.15, 2)#expression
-    for price in prices   #clause
+    round(price * 1.15, 2)  # expression
+    for price in prices  # clause
 ]
 
-print(prices_with_vat) #[11.5, 28.75, 46.0]
+print(prices_with_vat)  # [11.5, 28.75, 46.0]
 
 
 scores = [42, 67, 91, 58, 75]
 
 passing_scores = [
-    score                 #expression
-    for score in scores   #clause
-    if score >= 60        #Filter
+    score  # expression
+    for score in scores  # clause
+    if score >= 60  # Filter
 ]
 
-print(passing_scores)  # [67, 91, 75] 
+print(passing_scores)  # [67, 91, 75]
 
 raw_names = [" sara ", "", "OMAR", " lina"]
 
 cleann_names = [
     name.strip().title()
     for name in raw_names
-    if name.strip()         #First Filter and if no name it will be false
+    if name.strip()  # First Filter and if no name it will be false
 ]
 print(cleann_names)
 
 numbers = [1, 2]
 letters = ["A", "B"]
 
+# multiple list comprehension
 pairs = [
-    (number, letter)       #expression
-    for number in numbers  #clause
-    for letter in letters  #clause
+    (number, letter)  # expression
+    for number in numbers  # clause
+    for letter in letters  # clause
 ]
 print(pairs)
 
 
 scores = [42, 67, 91]
 
+# condition expression
 labels = [
-    "pass" if score >= 60 else "retry"   #condition expression
-    for score in scores                  #clause
+    "pass" if score >= 60 else "retry"
+    for score in scores  # clause
 ]
 
 print(labels)
@@ -65,12 +67,12 @@ emails = [
     "lina@school.sa"
 ]
 
-domains = {  #set no duplicates
-    email.split("@")[1].lower() #expression
-    for email in emails         #clause
+domains = {  # set no duplicates
+    email.split("@")[1].lower()  # expression
+    for email in emails  # clause
 }
 
-print(domains)  #{'example.com', 'school.sa'}
+print(domains)  # {'example.com', 'school.sa'}
 
 
 numbers = range(1, 6)
@@ -80,4 +82,4 @@ squares = {
     for number in numbers
 }
 
-print(squares)
+print(squares)  # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25} dictionary comprehension
