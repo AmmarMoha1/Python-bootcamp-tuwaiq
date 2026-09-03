@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ post.title }}</title>
+</head>
+
+<body>
+
+    <h1>{{ post.title }}</h1>
+
+    <p>
+        Category:
+        <a href="{% url 'blog:category' post.category %}">
+            {{ post.category }}
+        </a>
+    </p>
+
+    <a href="{% url 'blog:list' %}">
+        Back to Blog
+    </a>
+
+</body>
+
+</html>
