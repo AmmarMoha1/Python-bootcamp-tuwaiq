@@ -23,15 +23,15 @@ A simple Django project that demonstrates how to work with GET and POST requests
 
 ### Register Page
 
-![Register](screenshots/register.png)
+![Register](screenshots/Register.png)
 
 ### Login Page
 
-![Login](screenshots/login.png)
+![Login](screenshots/Login.png)
 
 ### Profile Page
 
-![Profile](screenshots/profile.png)
+![Profile](screenshots/Profile.png)
 
 ## Run the Project
 
