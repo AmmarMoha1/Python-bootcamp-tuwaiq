@@ -1,0 +1,25 @@
+<div class="card">
+
+    <h2>
+        {{ course.title|upper }}
+    </h2>
+
+    <p>
+        {{ course.description }}
+    </p>
+
+    {% if course.available %}
+
+    <p class="available">
+        Available
+    </p>
+
+    {% else %}
+
+    <p class="unavailable">
+        Not Available
+    </p>
+
+    {% endif %}
+
+</div>

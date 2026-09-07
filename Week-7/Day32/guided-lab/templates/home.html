@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block content %}
+
+<h1>Home</h1>
+
+{% if username %}
+<h2>
+    Welcome {{ username|upper }}
+</h2>
+{% else %}
+<h2>Welcome Guest</h2>
+{% endif %}
+
+<p>
+    Welcome to our Django learning platform.
+</p>
+
+{% endblock %}
