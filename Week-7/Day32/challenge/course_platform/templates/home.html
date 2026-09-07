@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Home
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <h1>
+        Welcome {{ username|title }}
+    </h1>
+
+    <p>
+        Start learning with our available courses.
+    </p>
+
+    <a class="button" href="{% url 'courses:list' %}">
+        View Courses
+    </a>
+
+</section>
+
+{% endblock %}

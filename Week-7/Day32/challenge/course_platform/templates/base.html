@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        Course Platform
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>Course Platform</h2>
+
+        <div>
+            <a href="{% url 'courses:home' %}">
+                Home
+            </a>
+
+            <a href="{% url 'courses:list' %}">
+                Courses
+            </a>
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Course Platform © 2026
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

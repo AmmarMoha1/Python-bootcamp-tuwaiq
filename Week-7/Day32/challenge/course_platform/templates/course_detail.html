@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+{% block title %}
+
+{% if course %}
+{{ course.name|title }}
+{% else %}
+Course Not Found
+{% endif %}
+
+{% endblock %}
+
+
+{% block content %}
+
+{% if course %}
+
+<div class="course-detail">
+
+    <img src="{% static 'images/'|add:course.image %}" alt="{{ course.name }}">
+
+
+    <h1>
+        {{ course.name|title }}
+    </h1>
+
+
+    <p>
+        Level:
+        {{ course.level|title }}
+    </p>
+
+
+    <p>
+        {{ course.description|safe }}
+    </p>
+
+
+    {% if course.student_count > 0 %}
+
+    <p>
+        Students:
+        {{ course.student_count }}
+    </p>
+
+    {% else %}
+
+    <p>
+        No students enrolled yet.
+    </p>
+
+    {% endif %}
+
+
+    <a class="button" href="{% url 'courses:list' %}">
+        Back to Courses
+    </a>
+
+</div>
+
+{% else %}
+
+<h1>
+    Course not found.
+</h1>
+
+<a href="{% url 'courses:list' %}">
+    Back to Courses
+</a>
+
+{% endif %}
+
+{% endblock %}
