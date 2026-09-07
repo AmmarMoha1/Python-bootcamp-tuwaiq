@@ -33,6 +33,11 @@ A simple Django project that demonstrates how to work with GET and POST requests
 
 ![Profile](screenshots/Profile.png)
 
+### Status Page
+
+![Status](screenshots/Status.png)
+
+
 ## Run the Project
 
 ```bash
