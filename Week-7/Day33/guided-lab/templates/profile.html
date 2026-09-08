@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Profile Upload</title>
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Profile Image</h1>
+
+
+        {% if image_url %}
+
+        <img class="avatar" src="{{ image_url }}" alt="Uploaded Avatar">
+
+        {% else %}
+
+        <img class="avatar" src="{% static 'images/default-avatar.png' %}" alt="Default Avatar">
+
+        {% endif %}
+
+
+        <form method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <input type="file" name="avatar" accept="image/*" required>
+
+            <button type="submit">
+                Upload
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

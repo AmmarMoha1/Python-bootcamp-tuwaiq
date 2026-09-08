@@ -1,0 +1,124 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Instagram</title>
+
+    <link rel="stylesheet" href="{% static 'css/feed.css' %}">
+
+</head>
+
+
+<body>
+
+    <main class="container">
+
+        <h1>Mini Instagram</h1>
+
+
+        <section class="create-post">
+
+            <h2>Create Post</h2>
+
+
+            {% if error %}
+
+            <p class="error">
+                {{ error }}
+            </p>
+
+            {% endif %}
+
+
+            <form method="post" enctype="multipart/form-data">
+
+                {% csrf_token %}
+
+
+                <input type="text" name="username" placeholder="Username" required>
+
+
+                <textarea name="description" placeholder="Write a caption..." required></textarea>
+
+
+                <input type="file" name="image" accept=".jpg,.jpeg,.png" required>
+
+
+                <button type="submit">
+                    Post
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section class="feed">
+
+            {% for post in posts %}
+
+            <article class="post">
+
+                <h3>
+                    @{{ post.username }}
+                </h3>
+
+
+                <img src="{{ post.image.url }}" alt="{{ post.description }}">
+
+
+                <p>
+                    {{ post.description }}
+                </p>
+
+
+                {% if post.likes == 0 %}
+
+                <p>
+                    Be the first to like this
+                </p>
+
+                {% else %}
+
+                <p>
+                    {{ post.likes }} likes
+                </p>
+
+                {% endif %}
+
+
+                <form method="post" action="{% url 'posts:like' post.id %}">
+
+                    {% csrf_token %}
+
+                    <button type="submit">
+                        ❤️ Like
+                    </button>
+
+                </form>
+
+            </article>
+
+            {% empty %}
+
+            <p>
+                No posts yet.
+            </p>
+
+            {% endfor %}
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
