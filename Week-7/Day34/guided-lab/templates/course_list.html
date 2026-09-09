@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Courses</title>
+</head>
+
+<body>
+
+    <h1>Course Catalog</h1>
+
+
+    <form method="get">
+
+        <input type="text" name="q" placeholder="Search courses..." value="{{ search_query }}">
+
+
+        <select name="category">
+
+            <option value="">
+                All Categories
+            </option>
+
+            <option value="programming" {% if category == "programming" %} selected {% endif %}>
+                Programming
+            </option>
+
+            <option value="design" {% if category == "design" %} selected {% endif %}>
+                Design
+            </option>
+
+        </select>
+
+
+        <select name="difficulty">
+
+            <option value="">
+                All Difficulties
+            </option>
+
+            <option value="beginner" {% if difficulty == "beginner" %} selected {% endif %}>
+                Beginner
+            </option>
+
+            <option value="intermediate" {% if difficulty == "intermediate" %} selected {% endif %}>
+                Intermediate
+            </option>
+
+            <option value="advanced" {% if difficulty == "advanced" %} selected {% endif %}>
+                Advanced
+            </option>
+
+        </select>
+
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+
+    <hr>
+
+
+    {% for course in courses %}
+
+    <div>
+
+        <h2>
+            {{ course.title }}
+        </h2>
+
+        <p>
+            Category:
+            {{ course.category }}
+        </p>
+
+        <p>
+            Difficulty:
+            {{ course.difficulty }}
+        </p>
+
+        <a href="{% url 'courses:detail' course.id %}">
+            View Details
+        </a>
+
+    </div>
+
+    <hr>
+
+    {% empty %}
+
+    <p>
+        No courses found.
+    </p>
+
+    {% endfor %}
+
+
+    <div>
+
+        {% if page > 1 %}
+
+        <a
+            href="?page={{ page|add:'-1' }}&category={{ category }}&difficulty={{ difficulty }}&q={{ search_query|urlencode }}">
+            Previous
+        </a>
+
+        {% endif %}
+
+
+        <span>
+            Page {{ page }} of {{ total_pages }}
+        </span>
+
+
+        {% if page < total_pages %} <a
+            href="?page={{ page|add:'1' }}&category={{ category }}&difficulty={{ difficulty }}&q={{ search_query|urlencode }}">
+            Next
+            </a>
+
+            {% endif %}
+
+    </div>
+
+</body>
+
+</html>

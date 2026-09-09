@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Course Detail</title>
+</head>
+
+<body>
+
+    {% if course %}
+
+    <h1>
+        {{ course.title }}
+    </h1>
+
+
+    <nav>
+
+        <a href="{% url 'courses:detail' course.id %}?tab=details">
+            Details
+        </a>
+
+        |
+
+        <a href="{% url 'courses:detail' course.id %}?tab=syllabus">
+            Syllabus
+        </a>
+
+        |
+
+        <a href="{% url 'courses:detail' course.id %}?tab=instructor">
+            Instructor
+        </a>
+
+    </nav>
+
+
+    <hr>
+
+
+    {% if tab == "details" %}
+
+    <h2>Details</h2>
+
+    <p>
+        {{ course.description }}
+    </p>
+
+    <p>
+        Difficulty:
+        {{ course.difficulty }}
+    </p>
+
+
+    {% elif tab == "syllabus" %}
+
+    <h2>Syllabus</h2>
+
+    <p>
+        {{ course.syllabus }}
+    </p>
+
+
+    {% elif tab == "instructor" %}
+
+    <h2>Instructor</h2>
+
+    <p>
+        {{ course.instructor }}
+    </p>
+
+    {% endif %}
+
+
+    <hr>
+
+    <a href="{% url 'courses:list' %}">
+        Back to Courses
+    </a>
+
+
+    {% else %}
+
+    <h1>
+        Course not found.
+    </h1>
+
+    {% endif %}
+
+</body>
+
+</html>
