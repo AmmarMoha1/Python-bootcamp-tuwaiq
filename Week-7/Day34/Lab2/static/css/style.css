@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2,
+h3 {
+    margin-top: 0;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Forms */
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+/* Buttons */
+
+button,
+.button {
+    display: inline-block;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover,
+.button:hover {
+    opacity: 0.85;
+    text-decoration: none;
+}
+
+
+/* Cards */
+
+.card,
+.post,
+.product,
+.course {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.card img,
+.post img,
+.product img,
+.course img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+/* Navigation */
+
+nav {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    margin-right: 15px;
+}
+
+
+/* Tabs */
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tabs a {
+    padding: 10px 15px;
+    background-color: #eee;
+    border-radius: 6px;
+}
+
+.tabs a:hover {
+    background-color: #ddd;
+    text-decoration: none;
+}
+
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.pagination a {
+    padding: 8px 14px;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+}
+
+.pagination a:hover {
+    opacity: 0.85;
+    text-decoration: none;
+}
+
+
+/* Messages */
+
+.error {
+    color: #b91c1c;
+    background-color: #fee2e2;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.success {
+    color: #166534;
+    background-color: #dcfce7;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+
+/* Images */
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+
+/* Helpers */
+
+.text-center {
+    text-align: center;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 25px 0;
+}

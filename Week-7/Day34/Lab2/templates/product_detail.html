@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <h1>
+        {{ product.name }}
+    </h1>
+
+
+    <nav>
+
+        <a href="{% url 'products:detail' product.id %}?tab=details">
+            Details
+        </a>
+
+        |
+
+        <a href="{% url 'products:detail' product.id %}?tab=reviews">
+            Reviews
+        </a>
+
+        |
+
+        <a href="{% url 'products:detail' product.id %}?tab=shipping">
+            Shipping
+        </a>
+
+    </nav>
+
+
+    <hr>
+
+
+    {% if tab == "details" %}
+
+    <h2>Details</h2>
+
+    <p>
+        {{ product.description }}
+    </p>
+
+    <p>
+        Price: {{ product.price }}
+    </p>
+
+    <p>
+        Rating: {{ product.rating }}
+    </p>
+
+
+    {% elif tab == "reviews" %}
+
+    <h2>Reviews</h2>
+
+    <p>
+        Product rating:
+        {{ product.rating }} / 5
+    </p>
+
+
+    {% elif tab == "shipping" %}
+
+    <h2>Shipping</h2>
+
+    <p>
+        Standard shipping is available.
+    </p>
+
+    {% endif %}
+
+
+    <hr>
+
+
+    <a href="{% url 'products:list' %}">
+        Back to Products
+    </a>
+
+</body>
+
+</html>
