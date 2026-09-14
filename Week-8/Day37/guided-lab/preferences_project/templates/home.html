@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        Preferences and Cart
+    </title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        body.light {
+            background-color: white;
+            color: black;
+        }
+
+        body.dark {
+            background-color: #222;
+            color: white;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .cart {
+            margin-top: 30px;
+        }
+    </style>
+
+</head>
+
+
+<body class="{{ theme }}">
+
+    <h1>
+        Preferences and Cart
+    </h1>
+
+
+    <h2>
+        Current Theme: {{ theme }}
+    </h2>
+
+
+    <a href="{% url 'store:set_theme' 'light' %}">
+        Light Theme
+    </a>
+
+    <a href="{% url 'store:set_theme' 'dark' %}">
+        Dark Theme
+    </a>
+
+
+    <div class="cart">
+
+        <h2>
+            Cart Count: {{ cart_count }}
+        </h2>
+
+        <p>
+            Cart: {{ cart }}
+        </p>
+
+
+        <a href="{% url 'store:add_to_cart' 1 %}">
+            Add Product 1
+        </a>
+
+        <a href="{% url 'store:add_to_cart' 2 %}">
+            Add Product 2
+        </a>
+
+        <a href="{% url 'store:add_to_cart' 3 %}">
+            Add Product 3
+        </a>
+
+        <br><br>
+
+        <a href="{% url 'store:clear_cart' %}">
+            Clear Cart
+        </a>
+
+    </div>
+
+</body>
+
+</html>
