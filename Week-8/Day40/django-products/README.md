@@ -1,20 +1,42 @@
 # Django Products
 
-A simple Django project created to practice working with Django models and databases.
+This is a simple Django project created to practice Django models, migrations, and database operations.
 
-The project includes a `Product` model with fields such as name, description, price, stock, and active status.
+In this project, I created a `Product` model with different field types such as:
 
-The main purpose of this project is to practice:
-- Creating a Django project and app
-- Creating Django models
-- Running migrations
+- `CharField`
+- `TextField`
+- `DecimalField`
+- `PositiveIntegerField`
+- `BooleanField`
+- `DateField`
+- `DateTimeField`
+- `ImageField`
+
+I also practiced:
+
+- Creating and updating Django models
+- Running `makemigrations` and `migrate`
 - Creating model instances
-- Saving objects to the database
+- Saving data to the database
 - Using the Django shell
-- Understanding basic ORM operations
+- Viewing saved objects using Django ORM
+
+## Product Model
+
+The `Product` model contains:
+
+- Name
+- Description
+- Price
+- Stock
+- Active status
+- Available date
+- Created date
+- Product image
 
 ## Output
 
-The following screenshot shows the result of creating and saving a Product instance using the Django shell.
+The following screenshot shows the result after creating and saving Product objects in the Django shell.
 
-![Django Shell Output](images/output.png)
+![Django Product Output](images/output.png)
